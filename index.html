@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort Visualizer | By Sanskruti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="decor decor-1">[ 8, 3, 5 ]</div>
+    <div class="decor decor-2">O(n log n)</div>
+    <div class="decor decor-3">{ }</div>
+
+    <div class="hero-banner Kalam-bold">
+        <h1>Merge Sort :: The Field Guide</h1>
+        <p>Interactive Divide & Conquer Visualizer</p>
+    </div>
+
+    <div class="container scrapbook">
+        <aside class="sidebar scrapbook-card Kalam-regular">
+            <h2>Algorithm Specs</h2>
+            <div class="specs-content">
+                <p><strong>Time Complexity:</strong> <br> O(n log n) in all cases.</p>
+                <p><strong>Space Complexity:</strong> <br> O(n) auxiliary space.</p>
+                <p><strong>Method:</strong> <br> Divide & Conquer.</p>
+            </div>
+
+            <div class="student-badge">
+                <p><strong>Developed By:</strong></p>
+                <p>Sanskruti Yevankar</p>
+                <p>Reg No: RA2411026011026</p>
+            </div>
+        </aside>
+
+        <main class="content Kalam-regular">
+            <header class="scrapbook-card">
+                <div class="narrator-container">
+                    <div class="avatar-polaroid">
+                        <div class="avatar-emoji">👩🏻‍💻</div>
+                        <p class="avatar-name">Sanskruti</p>
+                    </div>
+                    <div class="chat-bubble Kalam-bold" id="story-board">
+                        Hi! I'm Sanskruti. Adjust the sliders below and click "Start Animation" to see my Merge Sort in action!
+                    </div>
+                </div>
+
+                <div class="interactive-controls">
+                    <div class="slider-group">
+                        <label for="size-slider">Array Size: <span id="size-val">15</span></label>
+                        <input type="range" id="size-slider" min="5" max="30" value="15">
+                    </div>
+                    <div class="slider-group">
+                        <label for="speed-slider">Animation Speed:</label>
+                        <input type="range" id="speed-slider" min="50" max="1500" value="500" dir="rtl">
+                    </div>
+                    <div class="buttons">
+                        <button id="start-btn" class="scrapbook-btn start">Start Animation</button>
+                        <button id="reset-btn" class="scrapbook-btn reset">Generate New</button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="visualization-area scrapbook-card" id="viz-container">
+                </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
