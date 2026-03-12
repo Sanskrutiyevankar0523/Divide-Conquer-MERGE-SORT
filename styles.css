@@ -48,12 +48,12 @@ body {
 }
 
 /* Sidebar & Badge */
-.sidebar { width: 300px; background-color: #e1f5fe; display: flex; flex-direction: column; gap: 20px;}
+.sidebar { width: 300px; background-color: #e1f5fe; display: flex; flex-direction: column; gap: 20px; height: fit-content;}
 .sidebar h2 { font-size: 1.8rem; color: #e67e22; border-bottom: 3px dashed #4a4a4a; padding-bottom: 10px; }
 .specs-content p { font-size: 1.1rem; margin-bottom: 15px; line-height: 1.4; }
 
 .student-badge {
-    margin-top: auto;
+    margin-top: 20px;
     padding: 15px;
     background: #ffd54f;
     border: 3px solid #111;
@@ -104,4 +104,27 @@ input[type=range] { cursor: pointer; accent-color: #d35400; width: 150px; }
     border-radius: 3px 3px 0 0; display: flex; justify-content: center; align-items: flex-end;
     padding-bottom: 5px; font-size: 0.8rem; color: #fff; font-weight: bold;
     transition: height 0.2s ease, background-color 0.2s ease;
+}
+
+/* --- Deep Dive Theory Section --- */
+.deep-dive { margin-top: 10px; background-color: #fffde7; }
+.deep-dive h3 { font-size: 1.8rem; color: #d35400; margin-bottom: 20px; border-bottom: 2px dashed #4a4a4a; padding-bottom: 10px; }
+
+.theory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.theory-box { background: rgba(255,255,255,0.6); padding: 15px; border: 1px solid #4a4a4a; border-radius: 5px; box-shadow: 2px 2px 0px rgba(0,0,0,0.1); }
+.theory-box.full-width { grid-column: 1 / -1; }
+.theory-box h4 { font-family: "Permanent Marker", cursive; color: #2980b9; margin-bottom: 10px; font-size: 1.2rem; }
+.theory-box p { margin-bottom: 10px; line-height: 1.5; }
+.theory-box ul { margin-left: 20px; margin-bottom: 10px; line-height: 1.5; }
+
+.highlight-math { display: inline-block; background-color: rgba(255, 215, 0, 0.4); padding: 5px 10px; font-weight: bold; border: 1px dashed #d35400; transform: rotate(-1deg); margin-top: 10px; font-size: 1.1rem; }
+
+/* Legend Colors */
+.legend { list-style: none; margin-left: 0 !important; display: flex; gap: 20px; flex-wrap: wrap; }
+.legend li { display: flex; align-items: center; gap: 8px; }
+.color-dot { width: 15px; height: 15px; border-radius: 50%; border: 1px solid #111; display: inline-block; }
+.color-dot.black { background-color: #1a1a1a; }
+.color-dot.orange { background-color: #d35400; }
+.color-dot.green { background-color: #2ecc71; }
+
 }
