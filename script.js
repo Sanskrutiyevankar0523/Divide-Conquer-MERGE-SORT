@@ -149,3 +149,5 @@ resetBtn.addEventListener('click', resetVisualization);
 
 // Initialize
 resetVisualization();
+
+resetVisualization();
