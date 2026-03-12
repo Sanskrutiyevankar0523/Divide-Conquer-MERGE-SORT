@@ -21,6 +21,7 @@
         <aside class="sidebar scrapbook-card Kalam-regular">
             <h2>Algorithm Specs</h2>
             <div class="specs-content">
+                <p><strong>Recurrence Relation:</strong> <br> T(n) = 2T(n/2) + O(n)</p>
                 <p><strong>Time Complexity:</strong> <br> O(n log n) in all cases.</p>
                 <p><strong>Space Complexity:</strong> <br> O(n) auxiliary space.</p>
                 <p><strong>Method:</strong> <br> Divide & Conquer.</p>
@@ -63,8 +64,51 @@
 
             <div class="visualization-area scrapbook-card" id="viz-container">
                 </div>
+
+            <div class="deep-dive scrapbook-card">
+                <h3 class="PermanentMarker-regular">🧠 The Theory Behind the Magic</h3>
+                
+                <div class="theory-grid">
+                    <div class="theory-box">
+                        <h4>1. Recurrence Relation Derivation</h4>
+                        <p>Merge Sort follows the Divide & Conquer paradigm. Here is how we get the formula:</p>
+                        <ul>
+                            <li><strong>Divide:</strong> Splitting the array into two halves takes constant time, <strong>O(1)</strong>.</li>
+                            <li><strong>Conquer:</strong> We recursively sort the two halves. Since each half is size n/2, this takes <strong>2T(n/2)</strong> time.</li>
+                            <li><strong>Combine:</strong> Merging the two sorted halves back together requires iterating through all elements, which takes linear time, <strong>O(n)</strong>.</li>
+                        </ul>
+                        <p class="highlight-math">Total Time: T(n) = 2T(n/2) + O(n)</p>
+                    </div>
+
+                    <div class="theory-box">
+                        <h4>2. Complexity Calculations</h4>
+                        <p><strong>Time Complexity: O(n log n)</strong><br>
+                        Using the Master Theorem (or a Recursion Tree), the array is divided in half log(n) times. At each level of the tree, merging takes O(n) work. Therefore, O(n) work done log(n) times = O(n log n) for Best, Average, and Worst cases.</p>
+                        <p><strong>Space Complexity: O(n)</strong><br>
+                        Unlike Quick Sort, Merge Sort is not an in-place sorting algorithm. During the <em>Combine</em> phase, we create temporary arrays (Left and Right) to hold the split elements before writing them back in sorted order. These temporary arrays require O(n) extra space.</p>
+                    </div>
+
+                    <div class="theory-box full-width">
+                        <h4>3. How to Read the Animation</h4>
+                        <p>Watch the colors to understand what the code is doing in real-time:</p>
+                        <ul class="legend">
+                            <li><span class="color-dot black"></span> <strong>Black Ink:</strong> Elements waiting to be sorted.</li>
+                            <li><span class="color-dot orange"></span> <strong>Orange Ink:</strong> The "Comparing" phase. Checking which element is smaller.</li>
+                            <li><span class="color-dot green"></span> <strong>Green Ink:</strong> The element has been successfully conquered, combined, and placed in its correct sorted position!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
     <script src="script.js"></script>
 </body>
+</html>
+            <div class="visualization-area scrapbook-card" id="viz-container">
+                </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
